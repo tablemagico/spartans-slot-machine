@@ -12,7 +12,7 @@ const spartanImages = [
   "images/spartans10.jpeg",
   "images/spartans11.jpeg",
   "images/spartans12.jpeg",
-  "images/spartans13.jpeg"
+  "images/spartans13.png"
 ];
 
 // Global variable to track spin count
