@@ -1,18 +1,18 @@
-// 13 raccoon images
-const raccoonImages = [
-  "images/racoons1.jpeg",
-  "images/racoons2.jpeg",
-  "images/racoons3.jpeg",
-  "images/racoons4.jpeg",
-  "images/racoons5.jpeg",
-  "images/racoons6.jpeg",
-  "images/racoons7.jpeg",
-  "images/racoons8.jpeg",
-  "images/racoons9.jpeg",
-  "images/racoons10.jpeg",
-  "images/racoons11.jpeg",
-  "images/racoons12.jpeg",
-  "images/racoons13.jpeg"
+// 13 spartan images
+const spartanImages = [
+  "images/spartans1.jpeg",
+  "images/spartans2.jpeg",
+  "images/spartans3.jpeg",
+  "images/spartans4.jpeg",
+  "images/spartans5.jpeg",
+  "images/spartans6.jpeg",
+  "images/spartans7.jpeg",
+  "images/spartans8.jpeg",
+  "images/spartans9.jpeg",
+  "images/spartans10.jpeg",
+  "images/spartans11.jpeg",
+  "images/spartans12.jpeg",
+  "images/spartans13.jpeg"
 ];
 
 // Global variable to track spin count
@@ -31,7 +31,7 @@ function shuffleArray(array) {
 // Add "repeatCount" times the images to each reel
 function populateReel(reelElement, repeatCount) {
   reelElement.innerHTML = "";
-  const shuffled = shuffleArray(raccoonImages);
+  const shuffled = shuffleArray(spartanImages);
 
   for (let i = 0; i < repeatCount; i++) {
     shuffled.forEach(src => {
@@ -59,7 +59,6 @@ function spinReel(reelElement, duration, callback, forceJackpot = false, jackpot
         let currentTop = parseFloat(reelElement.style.top) || 0;
         reelElement.style.top = (currentTop - displacement) + "px";
 
-        // Decelerate
         currentSpeed -= deceleration;
         if (currentSpeed < 5) currentSpeed = 5; // Minimum speed
 
@@ -73,7 +72,7 @@ function spinReel(reelElement, duration, callback, forceJackpot = false, jackpot
             reelElement.appendChild(img);
           }
           reelElement.style.top = "0px";
-          const finalIndex = Math.floor(Math.random() * raccoonImages.length);
+          const finalIndex = Math.floor(Math.random() * spartanImages.length);
           reelElement.style.top = (-finalIndex * 100) + "px";
           callback(finalIndex);
         } else {
@@ -102,7 +101,7 @@ function getMiddleImageIndex(reelElement) {
   if (index < 0) index = 0;
   if (index >= totalImages) index = totalImages - 1;
 
-  index = index % raccoonImages.length;
+  index = index % spartanImages.length;
 
   return index;
 }
@@ -111,7 +110,7 @@ function getMiddleImageIndex(reelElement) {
 function showGoldAnimation() {
   const goldAnimation = document.getElementById("goldAnimation");
 
-  const particles = 100; 
+  const particles = 100;
   for (let i = 0; i < particles; i++) {
     const particle = document.createElement("div");
     particle.classList.add("gold-particle");
@@ -168,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isJackpotSpin = (spinCount % 3 === 0);
     let jackpotImage = null;
     if (isJackpotSpin) {
-      jackpotImage = raccoonImages[Math.floor(Math.random() * raccoonImages.length)];
+      jackpotImage = spartanImages[Math.floor(Math.random() * spartanImages.length)];
     }
 
     spinSound.play();
