@@ -1,39 +1,58 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gerçekçi Slot Makinesi</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Racoons Slot Machine</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Racoon Slot Makinesi</h1>
+  <!-- Başlık: Daha Çekici Stil için Ekstra Sınıf Eklendi -->
+  <h1 class="slot-title">Racoons Slot Machine</h1>
 
-  <div class="machine">
-    <!-- 1. Makara -->
-    <div class="reel" id="reel1">
-      <div class="reel-content" id="reel1-content">
-        <!-- script.js ile dolduracağız -->
+  <!-- Yeni Kapsayıcı Başlangıcı -->
+  <div class="slot-container">
+    <div class="machine">
+      <!-- Reel 1 -->
+      <div class="reel" id="reel1">
+        <div class="reel-content" id="reel1-content">
+          <!-- JavaScript will populate -->
+        </div>
+      </div>
+
+      <!-- Reel 2 -->
+      <div class="reel" id="reel2">
+        <div class="reel-content" id="reel2-content">
+          <!-- JavaScript will populate -->
+        </div>
+      </div>
+
+      <!-- Reel 3 -->
+      <div class="reel" id="reel3">
+        <div class="reel-content" id="reel3-content">
+          <!-- JavaScript will populate -->
+        </div>
       </div>
     </div>
 
-    <!-- 2. Makara -->
-    <div class="reel" id="reel2">
-      <div class="reel-content" id="reel2-content">
-        <!-- script.js ile dolduracağız -->
-      </div>
-    </div>
+    <!-- Spin Button -->
+    <button id="spinBtn" class="spin-button">Spin</button>
 
-    <!-- 3. Makara -->
-    <div class="reel" id="reel3">
-      <div class="reel-content" id="reel3-content">
-        <!-- script.js ile dolduracağız -->
-      </div>
-    </div>
+    <!-- Result Display: Jackpot mesajını büyütmek için Ekstra Sınıf Eklendi -->
+    <div id="result" class="result-message"></div>
+
+    <!-- Creator Information -->
+    <div id="creator">Created by: Discord: tablemagico | X: cryptolife1919</div>
+  </div>
+  <!-- Yeni Kapsayıcı Sonu -->
+
+  <!-- Gold Animation -->
+  <div id="goldAnimation" class="gold-animation">
+    <div class="gold-particles"></div>
   </div>
 
-  <button id="spinBtn">Spin</button>
-
-  <div id="result"></div>
+  <!-- Sound Effects -->
+  <audio id="spinSound" src="sounds/spin.mp3"></audio>
+  <audio id="jackpotSound" src="sounds/jackpot.mp3"></audio>
 
   <script src="script.js"></script>
 </body>
