@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "images/racoons10.jpeg",
         "images/racoons11.jpeg",
         "images/racoons12.jpeg",
-        "images/racoons13.jpeg"
+        "images/racoons13.png"
     ];
   
     // Bir makaraya (ör: reel1Content) birçok kez bu resimleri ekle
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (src1 === src2 && src2 === src3) {
                     resultDiv.textContent = "Jackpot!";
                 } else {
-                    resultDiv.textContent = "Tekrar dene!";
+                    resultDiv.textContent = "Try Again!";
                 }
             }
         }
